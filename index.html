@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6f1725">
+<meta name="description" content="A beautiful coastal Tulunadu wedding invitation.">
+<title>Our Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="petals" aria-hidden="true"></div>
+
+<!-- Opening screen -->
+<section id="opening" class="opening">
+  <div class="opening-inner">
+    <div class="opening-symbol">❋</div>
+    <p class="eyebrow">A beautiful beginning</p>
+    <h1>Two hearts.<br><span>One journey.</span></h1>
+    <p class="opening-note">We invite you to celebrate our special day with us.</p>
+    <button id="enterBtn" class="gold-btn">Open Invitation</button>
+  </div>
+</section>
+
+<!-- Music -->
+<audio id="bgMusic" loop preload="none">
+  <!-- Put your music file in images/music.mp3 and uncomment the next line -->
+  <!-- <source src="images/music.mp3" type="audio/mpeg"> -->
+</audio>
+<button id="musicBtn" class="floating-btn music-btn" aria-label="Play music">♫</button>
+
+<main id="main">
+
+  <section class="hero section reveal">
+    <div class="ornament">❈</div>
+    <p class="eyebrow">With love & blessings</p>
+    <h2><span>YOUR NAME</span><small>&</small><span>PARTNER'S NAME</span></h2>
+    <p class="hero-date">Invite you to be part of their beautiful beginning</p>
+    <div class="scroll-hint">Scroll to discover <span>↓</span></div>
+  </section>
+
+  <section class="story section reveal">
+    <div class="section-label">01 · Our story</div>
+    <div class="story-card">
+      <div class="photo-frame">
+        <img src="images/couple-1.jpg" alt="Couple photograph" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80'">
+      </div>
+      <div class="story-copy">
+        <h3>A little story<br><em>about us</em></h3>
+        <p>Two paths crossed, two lives became one, and a beautiful story began. We would be delighted to have you with us as we celebrate this new chapter.</p>
+        <p class="tulu-note">Daiva deggeda, manushya preetiya — with blessings and love.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scratch-off dates -->
+  <section class="dates section reveal">
+    <div class="section-label">02 · The celebrations</div>
+    <h3>Reveal our<br><em>special dates</em></h3>
+    <p class="hint">Scratch the golden panel to reveal the details.</p>
+
+    <div class="scratch-grid">
+      <article class="event-card">
+        <p class="event-type">Event One</p>
+        <h4>YOUR EVENT</h4>
+        <div class="scratch-wrap">
+          <div class="hidden-date">
+            <strong>20 DECEMBER 2026</strong>
+            <span>7:00 PM · Venue Name</span>
+          </div>
+          <canvas class="scratch-canvas"></canvas>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <p class="event-type">Event Two</p>
+        <h4>YOUR WEDDING</h4>
+        <div class="scratch-wrap">
+          <div class="hidden-date">
+            <strong>21 DECEMBER 2026</strong>
+            <span>10:00 AM · Venue Name</span>
+          </div>
+          <canvas class="scratch-canvas"></canvas>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="photo-section section reveal">
+    <div class="section-label">03 · Moments</div>
+    <h3>Our favourite<br><em>moments</em></h3>
+    <div class="gallery">
+      <img src="images/photo-1.jpg" alt="Wedding moment" onerror="this.src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80'">
+      <img src="images/photo-2.jpg" alt="Wedding moment" onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80'">
+      <img src="images/photo-3.jpg" alt="Wedding moment" onerror="this.src='https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?auto=format&fit=crop&w=900&q=80'">
+      <img src="images/photo-4.jpg" alt="Wedding moment" onerror="this.src='https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=900&q=80'">
+      <img src="images/photo-5.jpg" alt="Wedding moment" onerror="this.src='https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=900&q=80'">
+      <img src="images/photo-6.jpg" alt="Wedding moment" onerror="this.src='https://images.unsplash.com/photo-1519657337289-077653f724ed?auto=format&fit=crop&w=900&q=80'">
+    </div>
+  </section>
+
+  <section class="venue section reveal">
+    <div class="section-label">04 · The venue</div>
+    <div class="venue-card">
+      <div class="venue-art">❋</div>
+      <p class="eyebrow">Where we gather</p>
+      <h3>VENUE NAME</h3>
+      <p>Full venue address goes here<br>City, State, PIN</p>
+      <a class="gold-btn" href="https://maps.google.com/?q=YOUR+VENUE" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+    </div>
+  </section>
+
+  <section class="countdown section reveal">
+    <div class="section-label">05 · Until we say yes</div>
+    <h3>The countdown<br><em>has begun</em></h3>
+    <div class="timer" id="timer">
+      <div><strong id="days">00</strong><span>Days</span></div>
+      <div><strong id="hours">00</strong><span>Hours</span></div>
+      <div><strong id="minutes">00</strong><span>Minutes</span></div>
+      <div><strong id="seconds">00</strong><span>Seconds</span></div>
+    </div>
+  </section>
+
+  <section class="calendar section reveal">
+    <div class="section-label">06 · Save the date</div>
+    <h3>Keep the day<br><em>close to your heart</em></h3>
+    <button id="calendarBtn" class="outline-btn">＋ Add to Calendar</button>
+    <button id="shareBtn" class="outline-btn">↗ Share Invitation</button>
+  </section>
+
+  <section class="closing section reveal">
+    <div class="closing-symbol">❋</div>
+    <p class="eyebrow">Your presence is our present</p>
+    <h2>See you<br><em>there.</em></h2>
+    <p>With love,<br><strong>YOUR NAME & PARTNER'S NAME</strong></p>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
